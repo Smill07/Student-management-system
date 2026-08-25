@@ -13,6 +13,16 @@ const App = () => {
      copyStudent.splice(index,1);
      setStudent(copyStudent);  
     } 
+  const[courses,setCourses]=useState([
+    "BTech",
+    "BCA",
+    "BBA"
+  ])
+  const deletecourse=(index)=>{
+   const copyCourses=[...courses];
+   copyCourses.splice(index,1);
+   setCourses(copyCourses);
+  }
   return (
     <div>
      <Navbar />
@@ -20,8 +30,8 @@ const App = () => {
     <Routes>
     <Route path='/' element={<Dashboard />} />
     <Route path='/students' element={<Students student={student} deletestu={deletestu} />} />
-    <Route path='/addstudents' element={<Addstudents student={student} setStudent={setStudent} />} />
-    <Route path='/courses' element={<Courses/>}/>
+    <Route path='/addstudents' element={<Addstudents student={student} setStudent={setStudent} courses={courses}/>} />
+    <Route path='/courses' element={<Courses courses={courses} setCourses={setCourses} deletecourse={deletecourse}/>}/>
      </Routes>
     </div>
   )

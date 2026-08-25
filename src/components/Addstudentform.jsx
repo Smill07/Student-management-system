@@ -27,19 +27,16 @@ const Addstudentform = (props) => {
         <div className='w-1/2'>
             <h2 className='font-medium text-sm mt-5 ml-1.5 mb-1.5'>Course:</h2>
             <select value={course} onChange={(e)=>{setCourse(e.target.value)}} className='border border-gray-200 px-4 py-3 w-full rounded-xl' name="Select course" id="">
-              <option value=""></option>
-                <option value='BTech' >BTech</option>
-                <option value='BBA' >BBA</option>
-                <option value='BCA' >BCA</option>
-                <option value='MBA' >MBA</option>
-                <option value='Msc' >Msc</option>
-                <option value='Bsc'>Bsc</option>
+              <option value="">Select a course</option>
+              {props.courses.map(function(course,idx){
+                return <option key={idx} value={course}>{course}</option>
+              })}
                 </select>
         </div>
         <div className='w-1/2'>
             <h2 className='font-medium text-sm mt-5 ml-1.5 mb-1.5'>Status:</h2>
             <select value={status} onChange={(e)=>{setStatus(e.target.value)}} className='border border-gray-200 px-4 py-3 w-full rounded-xl'>
-                <option value=""></option>
+                <option value="">Select status</option>
                 <option value='Active' >Active</option>
                 <option value='Inactive' >Inactive</option>
             </select>

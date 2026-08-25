@@ -5,7 +5,7 @@ const Addstudents = (props) => {
   return (
     <div className='px-16 pt-5'>
     <Addstudentwelcome />
-    <Addstudentform student={props.student} setStudent={props.setStudent} />  
+    <Addstudentform student={props.student} setStudent={props.setStudent} courses={props.courses} />  
     </div>
   )
 }
