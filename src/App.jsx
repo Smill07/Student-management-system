@@ -25,10 +25,10 @@ const App = () => {
   }
   return (
     <div>
-     <Navbar />
+     <Navbar student={student} />
      <Center />
     <Routes>
-    <Route path='/' element={<Dashboard />} />
+    <Route path='/' element={<Dashboard student={student} courses={courses} />} />
     <Route path='/students' element={<Students student={student} deletestu={deletestu} />} />
     <Route path='/addstudents' element={<Addstudents student={student} setStudent={setStudent} courses={courses}/>} />
     <Route path='/courses' element={<Courses courses={courses} setCourses={setCourses} deletecourse={deletecourse}/>}/>
