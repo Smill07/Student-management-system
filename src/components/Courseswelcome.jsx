@@ -2,12 +2,7 @@ import React, { useState } from 'react'
 
 const Courseswelcome = (props) => {
   const[inpcourse,setInpcourse]=useState('')
-  const addcourse=()=>{
-    const copyCourse=[...props.courses];
-    copyCourse.push(inpcourse);
-    props.setCourses(copyCourse)
-    setInpcourse('')
-  }
+  const addcourse=()=>{ if (inpcourse.trim()) { props.addCourse(inpcourse); setInpcourse('') } }
   return (
      <div>
         <div className='flex justify-between items-center mb-8'>

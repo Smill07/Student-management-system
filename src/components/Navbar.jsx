@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = (props) => {
+const Navbar = ({ studentCount }) => {
   return (
     <div className=' flex justify-between px-19 py-3 items-center shadow-sm'>
         <div className='flex items-center gap-2'>
@@ -14,7 +14,7 @@ const Navbar = (props) => {
       <p className='text-xs text-gray-400'>Manage your studies efficiently</p>
       </div>
       </div>
-      <p className='text-xs text-gray-400'>{props.student.length} Students registered</p>
+      <p className='text-xs text-gray-400'>{studentCount} Students registered</p>
     </div>
   )
 }

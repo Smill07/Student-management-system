@@ -13,6 +13,9 @@ const Navigation = () => {
      <Link to='/addstudents'>
     <button className='py-1 px-6 rounded-full text-xs hover:shadow-lg hover:border-gray-400 transition-all text-gray-400 hover:text-black'>Add Students</button>
      </Link> 
+     <Link to='/courses'>
+    <button className='py-1 px-6 rounded-full text-xs hover:shadow-lg hover:border-gray-400 transition-all text-gray-400 hover:text-black'>Courses</button>
+     </Link>
     </div>
   )
 }

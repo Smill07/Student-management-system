@@ -6,8 +6,8 @@ const Studenttable = (props) => {
   return (
     <div>
      <Studenttableheader />
-     {props.student.map(function(student,idx){
-     return <Studenttablerow key={idx} name={student.name} email={student.email} course={student.course} status={student.status} deletestu={props.deletestu}/>
+     {props.student.map(function(student){
+     return <Studenttablerow key={student._id} student={student} deleteStudent={props.deleteStudent}/>
      })}
     </div>
   )
