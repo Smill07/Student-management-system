@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = ({ studentCount }) => {
+const Navbar = ({ studentCount, user, onSignOut }) => {
   return (
     <div className=' flex justify-between px-19 py-3 items-center shadow-sm'>
         <div className='flex items-center gap-2'>
@@ -14,7 +14,7 @@ const Navbar = ({ studentCount }) => {
       <p className='text-xs text-gray-400'>Manage your studies efficiently</p>
       </div>
       </div>
-      <p className='text-xs text-gray-400'>{studentCount} Students registered</p>
+      <div className="flex items-center gap-4"><p className='text-xs text-gray-400'>{studentCount} Students registered</p><span className="text-sm text-slate-600">{user?.name}</span><button onClick={onSignOut} className="rounded-xl border border-slate-200 px-3 py-1.5 text-xs">Sign out</button></div>
     </div>
   )
 }
