@@ -14,7 +14,7 @@ const Navbar = ({ studentCount, user, onSignOut }) => {
       <p className='text-xs text-gray-400'>Manage your studies efficiently</p>
       </div>
       </div>
-      <div className="flex items-center gap-4"><p className='text-xs text-gray-400'>{studentCount} Students registered</p><span className="text-sm text-slate-600">{user?.name}</span><button onClick={onSignOut} className="rounded-xl border border-slate-200 px-3 py-1.5 text-xs">Sign out</button></div>
+      <div className="flex items-center gap-4"><p className='text-xs text-gray-400'>{studentCount} Students registered</p><span className="text-sm text-slate-600">{user?.name} <span className="text-xs text-slate-400">({user?.role})</span></span><button onClick={onSignOut} className="rounded-xl border border-slate-200 px-3 py-1.5 text-xs">Sign out</button></div>
     </div>
   )
 }

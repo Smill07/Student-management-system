@@ -10,9 +10,9 @@ const Courseswelcome = (props) => {
       <h1 className='text-white font-medium text-2xl'>Manage courses</h1>
       <p className='text-gray-300'>View and edit course information</p>
       </div>
-    <button onClick={()=>{props.setShowform(true)}} className="bg-blue-500 text-white px-5 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-200 shadow-sm hover:shadow-md">
+    {props.isAdmin && <button onClick={()=>{props.setShowform(true)}} className="bg-blue-500 text-white px-5 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-200 shadow-sm hover:shadow-md">
   + Add Course
-</button>
+</button>}
 <div>
   {props.showform &&  (
   <div className='flex gap-2'>
